@@ -16,6 +16,8 @@ public class LandingPageSteps {
 
     @Then("verify landing page has title {string}")
     public void verify_landing_page_has_title(String title) {
+        System.out.println("Expected Title======>" + title);
+        System.out.println("Actual Title======>" + landingPage.getPageTitle());
         Assert.assertTrue(landingPage.getPageTitle().equals(title));
     }
 }
